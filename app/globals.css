@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: rgb(255, 255, 255);
+    --foreground: rgb(10, 10, 10);
+    --card: rgb(255, 255, 255);
+    --card-foreground: rgb(10, 10, 10);
+    --popover: rgb(255, 255, 255);
+    --popover-foreground: rgb(10, 10, 10);
+    --primary: rgb(23, 23, 23);
+    --primary-foreground: rgb(250, 250, 250);
+    --secondary: rgb(245, 245, 245);
+    --secondary-foreground: rgb(23, 23, 23);
+    --muted: rgb(245, 245, 245);
+    --muted-foreground: rgb(117, 117, 117);
+    --accent: rgb(245, 245, 245);
+    --accent-foreground: rgb(23, 23, 23);
+    --destructive: rgb(255, 0, 0);
+    --destructive-foreground: rgb(250, 250, 250);
+    --border: rgb(229, 229, 229);
+    --input: rgb(229, 229, 229);
+    --ring: rgb(10, 10, 10);
+    --chart-1: rgb(255, 85, 85);
+    --chart-2: rgb(85, 170, 170);
+    --chart-3: rgb(85, 85, 170);
+    --chart-4: rgb(170, 170, 85);
+    --chart-5: rgb(170, 85, 85);
+    --radius: 0.5rem;
+  }
+  .dark, :root[class~="dark"] {
+    --background: rgb(10, 10, 10);
+    --foreground: rgb(250, 250, 250);
+    --card: rgb(10, 10, 10);
+    --card-foreground: rgb(250, 250, 250);
+    --popover: rgb(10, 10, 10);
+    --popover-foreground: rgb(250, 250, 250);
+    --primary: rgb(250, 250, 250);
+    --primary-foreground: rgb(23, 23, 23);
+    --secondary: rgb(38, 38, 38);
+    --secondary-foreground: rgb(250, 250, 250);
+    --muted: rgb(38, 38, 38);
+    --muted-foreground: rgb(163, 163, 163);
+    --accent: rgb(38, 38, 38);
+    --accent-foreground: rgb(250, 250, 250);
+    --destructive: rgb(163, 0, 0);
+    --destructive-foreground: rgb(250, 250, 250);
+    --border: rgb(38, 38, 38);
+    --input: rgb(38, 38, 38);
+    --ring: rgb(212, 212, 212);
+    --chart-1: rgb(85, 85, 255);
+    --chart-2: rgb(85, 85, 170);
+    --chart-3: rgb(255, 85, 85);
+    --chart-4: rgb(170, 85, 255);
+    --chart-5: rgb(255, 85, 170);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .dark {
+    @apply bg-background text-foreground;
   }
 }

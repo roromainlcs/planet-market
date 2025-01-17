@@ -1,9 +1,18 @@
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className=" dark:bg-background grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start bg-background">
         <Image
           className="dark:invert"
           src="https://nextjs.org/icons/next.svg"
@@ -47,6 +56,18 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <Dialog>
+            <DialogTrigger className=" border px-2 py-1">dialog</DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Dialog title</DialogTitle>
+                <DialogDescription>Dialog description</DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <button className="btn">Confirm</button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">

@@ -1,0 +1,21 @@
+
+
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -0.2rem;
+}
+
+.left p {
+  margin-left: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}

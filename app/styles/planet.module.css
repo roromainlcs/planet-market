@@ -1,0 +1,29 @@
+.textName {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.text {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: medium;
+  font-weight: normal;
+}
+
+@media (max-width: 625px) {
+  .subtext {
+    font-size: medium;
+    font-weight: normal;
+  }
+}
+
+.buyContainer {
+  border: none !important;
+  margin: 0 !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
