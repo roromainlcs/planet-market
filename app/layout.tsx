@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { UserProvider } from "@/contexts/userContext";
 import { XRPLProvider } from "@/contexts/xrplContext";
+import { ClientLayout } from "@/app/clientLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,9 +34,11 @@ export default function RootLayout({
       >
         <XRPLProvider>
           <UserProvider>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-              {children}
-            </ThemeProvider>
+            <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+              <ClientLayout>
+                {children}
+              </ClientLayout>
+              </ThemeProvider>
           </UserProvider>
         </XRPLProvider>
       </body>
