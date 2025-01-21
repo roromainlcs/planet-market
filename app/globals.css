@@ -40,7 +40,7 @@ body {
     --chart-5: rgb(170, 85, 85);
     --radius: 0.5rem;
   }
-  .dark, :root[class~="dark"] {
+  .dark {
     --background: rgb(10, 10, 10);
     --foreground: rgb(250, 250, 250);
     --card: rgb(10, 10, 10);
